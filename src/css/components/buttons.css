@@ -1,0 +1,119 @@
+/* Базовий клас для всіх кнопок */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: color var(--anim-fast),
+        background-color var(--anim-fast),
+        border-color var(--anim-fast),
+        opacity var(--anim-fast),
+        transform var(--anim-fast);
+}
+
+/* --- Кнопка "Замовити дзвінок" (Акцентна) --- */
+.button-call {
+    padding: 10px 24px;
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    color: var(--color-light);
+    font-size: var(--fs-m);
+    font-weight: var(--fw-semibold);
+}
+
+.button-call:hover,
+.button-call:focus {
+    background-color: transparent;
+    color: var(--color-primary);
+    /* Або навпаки, як ти хотів: */
+    /* background-color: var(--color-brand-light); */
+}
+
+@media screen and (min-width: 1240px) {
+    .button-call {
+        padding: 16px 32px;
+        font-size: var(--fs-l);
+    }
+}
+
+/* --- Кнопки "Нагору / Вниз" (Scroll) --- */
+.button-scroll {
+    position: fixed;
+    z-index: 90;
+    /* Трохи нижче за модалку */
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-brand-light);
+    color: var(--color-primary);
+    opacity: 0.6;
+}
+
+.button-scroll:hover,
+.button-scroll:focus {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.button-scroll-up {
+    bottom: 80px;
+    right: 20px;
+}
+
+.button-scroll-down {
+    bottom: 20px;
+    right: 20px;
+}
+
+.button-scroll-icon {
+    fill: currentColor;
+    /* Іконка завжди в колір тексту кнопки */
+}
+
+.button-scroll-up .button-scroll-icon {
+    transform: rotate(-90deg);
+    /* Якщо іконка стрілки дивиться вбік */
+}
+
+.button-scroll-down .button-scroll-icon {
+    transform: rotate(90deg);
+}
+
+/* --- Кнопка закриття (Modal / Menu) --- */
+.button-close {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    stroke: var(--color-dark);
+}
+
+.button-close:hover {
+    stroke: var(--color-primary);
+    transform: rotate(90deg);
+    /* Легкий ефект при наведенні */
+}
+
+.mobile-menu-button-close {
+    top: 16px;
+    right: 24px;
+}
+
+/* --- Burger (тільки логіка відображення) --- */
+.burger-menu {
+    background: none;
+    border: none;
+}
+
+@media screen and (min-width: 1240px) {
+    .burger-menu {
+        display: none;
+    }
+}

@@ -1,0 +1,56 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="modal-close-btn js-close-modal" type="button" aria-label="Закрити">
+      <svg width="24" height="24">
+        <use href="/icons/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <div class="modal-content">
+      <h2 class="modal-title">Залишити заявку</h2>
+      <p class="modal-text">Ми зв'яжемося з вами найближчим часом</p>
+
+      <form class="modal-form">
+        <div class="form-field">
+          <input
+            class="form-input"
+            type="text"
+            name="user-name"
+            id="user-name"
+            placeholder=" "
+            required />
+          <label class="form-label" for="user-name">Ім'я</label>
+        </div>
+
+        <div class="form-field">
+          <input
+            class="form-input"
+            type="tel"
+            name="user-tel"
+            id="user-tel"
+            placeholder=" "
+            required />
+          <label class="form-label" for="user-tel">Телефон</label>
+        </div>
+
+        <div class="form-field">
+          <input
+            class="form-input"
+            type="email"
+            name="user-email"
+            id="user-email"
+            placeholder=" "
+            required />
+          <label class="form-label" for="user-email">Email</label>
+        </div>
+
+        <button class="button modal-submit-btn" type="submit">Відправити</button>
+
+        <p class="form-policy">
+          Натискаючи кнопку, ви погоджуєтесь з
+          <a href="#" class="policy-link">політикою конфіденційності</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

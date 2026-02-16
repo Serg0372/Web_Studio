@@ -1,0 +1,90 @@
+/* ---------------- Header & General Logo ---------------- */
+.logo {
+    display: block;
+}
+
+.logo-icon {
+    width: 72px;
+    height: 38px;
+    fill: var(--color-light);
+    /* Логотип на Hero зазвичай світлий */
+    transition: fill var(--anim-fast);
+}
+
+.logo:hover .logo-icon,
+.logo:focus .logo-icon {
+    fill: var(--color-primary);
+}
+
+@media screen and (min-width: 1240px) {
+    .logo-icon {
+        width: 114px;
+        height: 56px;
+    }
+}
+
+/* ---------------- Burger & Menu Icons ---------------- */
+.burger-icon {
+    width: 24px;
+    height: 24px;
+    /* Використовуємо stroke, якщо іконка лінійна, або fill, якщо суцільна */
+    fill: var(--color-light);
+    transition: fill var(--anim-fast);
+}
+
+.burger-menu:hover .burger-icon,
+.burger-menu:focus .burger-icon {
+    fill: var(--color-primary);
+}
+
+/* ---------------- Scroll (Up/Down) Icons ---------------- */
+.button-scroll-icon {
+    fill: var(--color-primary);
+    transition: fill var(--anim-fast), transform var(--anim-fast);
+}
+
+/* Обертаємо стрілку залежно від напрямку */
+.button-scroll-up .button-scroll-icon {
+    transform: rotate(270deg);
+    /* Дивиться вгору */
+}
+
+.button-scroll-down .button-scroll-icon {
+    transform: rotate(90deg);
+    /* Дивиться вниз */
+}
+
+.button-scroll:hover .button-scroll-icon,
+.button-scroll:focus .button-scroll-icon {
+    fill: var(--color-brand-dark);
+}
+
+/* ---------------- Close Buttons (Modal/Menu) ---------------- */
+.button-close-icon {
+    /* Для іконок закриття часто використовується stroke (контур) */
+    fill: none;
+    stroke: var(--color-dark);
+    transition: stroke var(--anim-fast);
+}
+
+.button-close:hover .button-close-icon,
+.button-close:focus .button-close-icon {
+    stroke: var(--color-primary);
+}
+
+/* ---------------- Modal/Mobile Menu Logo ---------------- */
+.modal-logo {
+    display: block;
+    margin-bottom: 32px;
+}
+
+.modal-logo-icon {
+    fill: var(--color-dark);
+    /* У модалці зазвичай темне лого */
+    transition: fill var(--anim-fast);
+}
+
+.modal-logo:hover .modal-logo-icon,
+.modal-logo:focus .modal-logo-icon {
+    fill: var(--color-primary);
+}

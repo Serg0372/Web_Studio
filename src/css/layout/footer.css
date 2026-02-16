@@ -1,0 +1,81 @@
+.footer {
+    padding: 40px 0;
+    background-color: var(--color-brand-dark);
+    /* Темний фон з :root */
+    color: var(--color-light);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+}
+
+.footer-link,
+.address-link {
+    font-family: var(--primary-font);
+    font-style: normal;
+    color: var(--color-light);
+    transition: color var(--anim-fast);
+}
+
+.footer-link:hover,
+.address-link:hover {
+    color: var(--color-primary);
+}
+
+.address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.socials-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socials-icon {
+    fill: var(--color-light);
+    transition: fill var(--anim-fast);
+}
+
+.socials-link:hover .socials-icon {
+    fill: var(--color-primary);
+}
+
+.footer-legal {
+    font-size: var(--fs-xs);
+}
+
+/* Десктопна версія */
+@media screen and (min-width: 1240px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .footer-nav {
+        display: flex;
+        gap: 80px;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .socials-list {
+        justify-content: flex-start;
+    }
+
+    .footer-legal {
+        align-self: flex-end;
+    }
+}

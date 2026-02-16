@@ -1,0 +1,108 @@
+/* Styles for Mobile devices */
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  font-family: var(--primary-font);
+  font-size: var(--fs-m);
+  /* Змінив з S на M для кращої читабельності */
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-p);
+  color: var(--color-dark);
+
+  background-color: var(--color-light);
+
+  /* Покращення відображення шрифтів */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.section {
+  padding-top: 40px;
+  /* Трохи збільшив відступи для "повітря" */
+  padding-bottom: 40px;
+}
+
+.container {
+  max-width: 480px;
+  /* Стандарт для сучасних мобілок */
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--second-font);
+  line-height: var(--lh-h);
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-extrabold);
+}
+
+h2 {
+  margin-bottom: 24px;
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  text-align: center;
+  /* Зазвичай заголовки секцій по центру */
+}
+
+/* --- Акценти та допоміжні класи --- */
+.accent-text {
+  font-weight: var(--fw-semibold);
+}
+
+.accent-color {
+  color: var(--color-primary);
+}
+
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+/* Клас для приховування заголовків (SEO) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Styles for Desktop devices */
+@media screen and (min-width: 1240px) {
+  body {
+    font-size: var(--fs-l);
+  }
+
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .container {
+    max-width: 1240px;
+    /* Згідно з твоїм брейкпоінтом */
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  h2 {
+    margin-bottom: 48px;
+  }
+}
