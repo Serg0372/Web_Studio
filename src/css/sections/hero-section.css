@@ -1,6 +1,8 @@
 .hero-section {
-    background-image: var(--hero-gradient), url(/src/img/hero/hero-bi-m@1x.webp);
-    background-color: var(--color-dark);
+    margin-top: 56px;
+    background-image:
+        linear-gradient(rgba(46, 47, 66, 0.7) 0%, rgba(46, 47, 66, 0.7) 100%),
+        url(/src/img/hero/hero-bcg-m@1x.webp);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -8,58 +10,82 @@
 
 @media (min-resolution: 192dpi) {
     .hero-section {
-        background-image: var(--hero-gradient), url(/src/img/hero/hero-bi-m@2x.webp);
+        background-image:
+            linear-gradient(rgba(46, 47, 66, 0.7) 0%, rgba(46, 47, 66, 0.7) 100%),
+            url(/src/img/hero/hero-bcg-m@2x.webp);
     }
 }
 
 .hero-container {
     text-align: center;
-    min-height: 378px;
-    padding-top: 124px;
+    max-width: 216px;
+    min-height: 432px;
 }
 
 .hero-title {
-    margin-bottom: 48px;
-    color: var(--color-light);
-    font-family: var(--second-font);
-    /* Шрифти з :root */
-    font-size: var(--fs-h1);
-    font-weight: var(--fw-extrabold);
-    line-height: var(--lh-h);
+    padding-top: 72px;
+    padding-bottom: 72px;
 }
 
-.accent-color {
-    color: var(--color-primary);
-    /* Наш брендовий колір */
-}
 
-/* Десктопна версія */
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 767px) {
     .hero-section {
-        background-image: var(--hero-gradient), url(/src/img/hero/hero-bi-d@1x.webp);
+        margin-top: 72px;
+        background-image:
+            linear-gradient(rgba(46, 47, 66, 0.7) 0%, rgba(46, 47, 66, 0.7) 100%),
+            url(/src/img/hero/hero-bcg-t@1x.webp);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
     }
 
     @media (min-resolution: 192dpi) {
         .hero-section {
-            background-image: var(--hero-gradient), url(/src/img/hero/hero-bi-d@2x.webp);
+            background-image:
+                linear-gradient(rgba(46, 47, 66, 0.7) 0%, rgba(46, 47, 66, 0.7) 100%),
+                url(/src/img/hero/hero-bcg-t@2x.webp);
         }
     }
 
     .hero-container {
-        min-height: 736px;
-        padding-top: 272px;
+        text-align: center;
+        max-width: 522px;
+        min-height: 432px;
     }
 
     .hero-title {
-        margin-bottom: 0px;
+        padding-top: 112px;
+        padding-bottom: 36px;
     }
 }
 
-/* Кнопка в Hero (якщо потрібні специфічні налаштування) */
-.hero-button {
-    transition: transform var(--anim-fast);
-}
+@media screen and (min-width:1158px) {
+    .hero-section {
+        margin-top: 72px;
+        background-image:
+            linear-gradient(rgba(46, 47, 66, 0.7) 0%, rgba(46, 47, 66, 0.7) 100%),
+            url(/src/img/hero/hero-bcg-d@1x.webp);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+    }
 
-.hero-button:hover {
-    transform: scale(1.05);
+    @media (min-resolution: 192dpi) {
+        .hero-section {
+            background-image:
+                linear-gradient(rgba(46, 47, 66, 0.7) 0%, rgba(46, 47, 66, 0.7) 100%),
+                url(/src/img/hero/hero-bcg-d@2x.webp);
+        }
+    }
+
+    .hero-container {
+        text-align: center;
+        max-width: 522px;
+        min-height: 600px;
+    }
+
+    .hero-title {
+        padding-top: 188px;
+        padding-bottom: 48px;
+    }
 }

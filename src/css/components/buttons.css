@@ -1,62 +1,77 @@
-/* Базовий клас для всіх кнопок */
+.burger-menu {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 767px) {
+    .burger-menu {
+        display: none;
+    }
+}
+
 .button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
     margin: 0;
-    border: none;
-    border-radius: 8px;
+    border-radius: 4px;
+    padding: 16px 32px;
+    min-width: 169px;
+    max-height: 56px;
     cursor: pointer;
-    font-family: inherit;
-    transition: color var(--anim-fast),
-        background-color var(--anim-fast),
-        border-color var(--anim-fast),
-        opacity var(--anim-fast),
-        transform var(--anim-fast);
-}
-
-/* --- Кнопка "Замовити дзвінок" (Акцентна) --- */
-.button-call {
-    padding: 10px 24px;
-    background-color: var(--color-primary);
-    border: 2px solid var(--color-primary);
     color: var(--color-light);
-    font-size: var(--fs-m);
-    font-weight: var(--fw-semibold);
+    font-family: inherit;
+    background-color: var(--color-primary);
+    transition: background-color var(--anim-fast);
 }
 
-.button-call:hover,
-.button-call:focus {
-    background-color: transparent;
-    color: var(--color-primary);
-    /* Або навпаки, як ти хотів: */
-    /* background-color: var(--color-brand-light); */
+.button:hover,
+.button:focus {
+    background-color: var(--color-hover-text);
 }
 
-@media screen and (min-width: 1240px) {
-    .button-call {
-        padding: 16px 32px;
-        font-size: var(--fs-l);
+.hero-button {
+    margin-bottom: 72px;
+}
+
+@media screen and (min-width: 767px) {
+    .hero-button {
+        margin-bottom: 112px;
     }
 }
 
-/* --- Кнопки "Нагору / Вниз" (Scroll) --- */
+@media screen and (min-width: 1240px) {
+    .hero-button {
+        margin-bottom: 188px;
+    }
+}
+
+
 .button-scroll {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     z-index: 90;
-    /* Трохи нижче за модалку */
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     border: 2px solid var(--color-primary);
-    background-color: var(--color-brand-light);
-    color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-light);
     opacity: 0.6;
+    transition: opacity var(--anim-fast),
+        background-color var(--anim-fast),
+        transform var(--anim-fast);
 }
 
 .button-scroll:hover,
 .button-scroll:focus {
+    background-color: var(--color-hover-text);
     opacity: 1;
     transform: scale(1.1);
 }
@@ -71,49 +86,24 @@
     right: 20px;
 }
 
-.button-scroll-icon {
-    fill: currentColor;
-    /* Іконка завжди в колір тексту кнопки */
-}
 
-.button-scroll-up .button-scroll-icon {
-    transform: rotate(-90deg);
-    /* Якщо іконка стрілки дивиться вбік */
-}
 
-.button-scroll-down .button-scroll-icon {
-    transform: rotate(90deg);
-}
 
-/* --- Кнопка закриття (Modal / Menu) --- */
-.button-close {
+/* .button-close {
     position: absolute;
     width: 32px;
     height: 32px;
     background-color: transparent;
     border: none;
-    stroke: var(--color-dark);
+    stroke: var();
 }
 
 .button-close:hover {
-    stroke: var(--color-primary);
+    stroke: var();
     transform: rotate(90deg);
-    /* Легкий ефект при наведенні */
 }
 
 .mobile-menu-button-close {
     top: 16px;
     right: 24px;
-}
-
-/* --- Burger (тільки логіка відображення) --- */
-.burger-menu {
-    background: none;
-    border: none;
-}
-
-@media screen and (min-width: 1240px) {
-    .burger-menu {
-        display: none;
-    }
-}
+} */

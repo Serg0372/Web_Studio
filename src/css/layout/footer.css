@@ -1,12 +1,12 @@
 .footer {
     padding: 40px 0;
-    background-color: var(--color-brand-dark);
-    /* Темний фон з :root */
-    color: var(--color-light);
+    background-color: var();
+    color: var();
 }
 
 .footer-container {
-    display: flex;
+    display:
+        flex;
     flex-direction: column;
     gap: 40px;
     text-align: center;
@@ -14,15 +14,15 @@
 
 .footer-link,
 .address-link {
-    font-family: var(--primary-font);
+    font-family: var();
     font-style: normal;
-    color: var(--color-light);
+    color: var();
     transition: color var(--anim-fast);
 }
 
 .footer-link:hover,
 .address-link:hover {
-    color: var(--color-primary);
+    color: var();
 }
 
 .address-list {
@@ -39,43 +39,19 @@
 }
 
 .socials-icon {
-    fill: var(--color-light);
+    fill: var();
     transition: fill var(--anim-fast);
 }
 
 .socials-link:hover .socials-icon {
-    fill: var(--color-primary);
+    fill: var();
 }
 
 .footer-legal {
-    font-size: var(--fs-xs);
+    font-size:
+        var();
 }
 
-/* Десктопна версія */
-@media screen and (min-width: 1240px) {
-    .footer-container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        text-align: left;
-    }
+@media screen and (min-width: 767px) {}
 
-    .footer-nav {
-        display: flex;
-        gap: 80px;
-    }
-
-    .nav-list {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .socials-list {
-        justify-content: flex-start;
-    }
-
-    .footer-legal {
-        align-self: flex-end;
-    }
-}
+@media screen and (min-width:1158px) {}

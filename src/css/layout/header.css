@@ -1,10 +1,12 @@
 .header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 16px 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
     z-index: 10;
+    background-color: var(--color-accent);
 }
 
 .header-container {
@@ -13,80 +15,85 @@
     justify-content: space-between;
 }
 
-.header-nav {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
+.logo-text {
+    color: var(--color-primary);
+    font-family: var(--secondary-font);
+    font-size: var(--fs-s);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-m);
+    text-transform: uppercase;
+    transition: color var(--anim-fast);
+}
+
+.logo-accent {
+    color: var(--color-dark);
+    transition: color var(--anim-fast);
+}
+
+.logo-text:hover,
+.logo-text:focus,
+.logo-text:hover .logo-accent,
+.logo-text:focus .logo-accent {
+    color: var(--color-hover-text);
 }
 
 .nav-list {
     display: none;
-    /* Приховано для мобільних пристроїв */
 }
 
-/* Логотип */
-.logo-icon {
-    /* Використовуємо основний брендовий колір */
-    fill: var(--color-primary);
-    transition: fill var(--anim-fast);
+.header-address {
+    display: none;
 }
 
-.logo:hover .logo-icon {
-    fill: var(--color-light);
-}
 
-/* Десктопна навігація */
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 767px) {
+    .header {
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+
     .nav-list {
         display: flex;
         gap: 40px;
-        margin-left: 80px;
     }
 
     .nav-link {
-        color: var(--color-light);
-        font-family: var(--primary-font);
-        font-size: var(--fs-m);
-        font-weight: var(--fw-regular);
-        line-height: var(--lh-p);
+        padding: 24px 0;
         transition: color var(--anim-fast);
     }
 
     .nav-link:hover,
     .nav-link:focus,
     .nav-link.is-current {
-        color: var(--color-primary);
-        font-weight: var(--fw-semibold);
+        color: var(--color-hover-text);
     }
 
-    .burger-menu-btn {
-        display: none;
+    .header-address {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-size: var(--fs-xs);
+        font-weight: var(--fw-regular);
+        line-height: var(--lh-m);
+        letter-spacing: var(--ls-l);
+        color: var(--color-subtle-text);
+        transition: color var(--anim-fast);
+    }
+
+    .address-link:hover,
+    .address-link:focus {
+        color: var(--color-hover-text);
     }
 }
 
-/* Кнопка в хедері (Замовити дзвінок) */
-.header-button {
-    display: none;
-}
+@media screen and (min-width:1158px) {
 
-@media screen and (min-width: 1240px) {
-    .header-button {
-        display: block;
-        /* Стилі самої кнопки зазвичай у окремому файлі buttons.css */
+    .header-address {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        font-size: var(--fs-m);
+        line-height: var(--lh-xxl);
+        letter-spacing: var(--ls-m);
     }
-}
-
-/* Бургер-меню (Кнопка відкриття) */
-.burger-menu-btn {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    line-height: 0;
-    stroke: var(--color-light);
-    cursor: pointer;
-    transition: stroke var(--anim-fast);
-}
-
-.burger-menu-btn:hover {
-    stroke: var(--color-primary);
 }

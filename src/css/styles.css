@@ -9,7 +9,7 @@
 @import url('./components/icons.css');
 @import url('./components/mobile-menu.css');
 @import url('./components/modal.css');
-/* @import url('./components/animations.css'); */
+@import url('./components/form.css');
 /* @import url('./components/cards.css'); */
 
 /*Layout styles */
@@ -17,9 +17,9 @@
 @import url('./layout/footer.css');
 
 /*Sections styles */
-@import url('./sections/.css');
-@import url('./sections/.css');
-@import url('./sections/.css');
-@import url('./sections/.css');
-@import url('./sections/.css');
-@import url('./sections/.css');
+@import url('./sections/hero-section.css');
+@import url('./sections/features-section.css');
+@import url('./sections/teams-section.css');
+@import url('./sections/portfolio-section.css');
+/* @import url('./sections/.css');
+@import url('./sections/.css'); */
