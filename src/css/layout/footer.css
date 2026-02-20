@@ -17,7 +17,7 @@
     font-family: var();
     font-style: normal;
     color: var();
-    transition: color var(--anim-fast);
+    transition: color var(--transition);
 }
 
 .footer-link:hover,
@@ -40,7 +40,7 @@
 
 .socials-icon {
     fill: var();
-    transition: fill var(--anim-fast);
+    transition: fill var(--transition);
 }
 
 .socials-link:hover .socials-icon {

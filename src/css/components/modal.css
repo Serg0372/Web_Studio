@@ -6,7 +6,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
-    transition: opacity var(--anim-fast), visibility var(--anim-fast);
+    transition: opacity var(--transition), visibility var(--transition);
 }
 
 .backdrop.is-hidden {
@@ -51,61 +51,6 @@
     font-size: var();
 }
 
-.form-field {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.form-input {
-    width: 100%;
-    padding: 12px 16px;
-    border: 1px solid var();
-    border-radius: 8px;
-    font-size: var();
-    outline: none;
-    transition: border-color var(--anim-fast);
-}
-
-.form-input:focus {
-    border-color: var();
-}
-
-.form-label {
-    position: absolute;
-    top: 50%;
-    left: 16px;
-    transform: translateY(-50%);
-    padding: 0 4px;
-    color: var();
-    pointer-events: none;
-    background-color: var();
-    transition: all var(--anim-fast);
-}
-
-.form-input:focus+.form-label,
-.form-input:not(:placeholder-shown)+.form-label {
-    top: 0;
-    font-size: var();
-    color: var();
-}
-
-.modal-submit-btn {
-    width: 100%;
-    margin-top: 10px;
-
-}
-
-.form-policy {
-    margin-top: 16px;
-    font-size: 12px;
-    text-align: center;
-    color: var();
-}
-
-.policy-link {
-    color: var();
-    text-decoration: underline;
-}
 
 @media screen and (min-width: 767px) {
     .modal {

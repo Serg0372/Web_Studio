@@ -11,30 +11,16 @@
 
 .team-card {
     text-align: center;
-    max-width: 264px;
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    box-shadow: var(--box-shadow);
     background: var(--color-white-bg);
 }
 
-
-.team-foto {
-    margin-bottom: 32px;
-}
-
-.subtitle {}
-
-.team-name {
-    font-weight: var(--fw-medium);
-    font-size: var(--fs-sm);
-    line-height: var(--lh-l);
-    margin-bottom: 8px;
-}
-
-.team-profesion {
-    font-size: var(--fs-m);
-    font-weight: var(--fw-regular);
-    line-height: var(--lh-xxl);
-    margin-bottom: 8px;
+.team-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 32px 16px;
 }
 
 .social-list {
@@ -52,13 +38,12 @@
     border: 1px solid transparent;
     border-radius: 50%;
     background-color: var(--color-primary);
-    transition: background-color var(--anim-fast);
-    margin-bottom: 32px;
+    transition: background-color var(--transition);
 }
 
 .social-item:hover,
 .social-item:focus {
-    background-color: var(--color-hover-icon);
+    background-color: var(--color-pressed-icon);
 }
 
 @media screen and (min-width: 767px) {

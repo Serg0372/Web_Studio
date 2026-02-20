@@ -1,7 +1,7 @@
 .hero-section {
     margin-top: 56px;
     background-image:
-        linear-gradient(rgba(46, 47, 66, 0.7) 0%, rgba(46, 47, 66, 0.7) 100%),
+        var(--linier-gradient),
         url(/src/img/hero/hero-bcg-m@1x.webp);
     background-repeat: no-repeat;
     background-position: top center;
@@ -11,7 +11,7 @@
 @media (min-resolution: 192dpi) {
     .hero-section {
         background-image:
-            linear-gradient(rgba(46, 47, 66, 0.7) 0%, rgba(46, 47, 66, 0.7) 100%),
+            var(--linier-gradient),
             url(/src/img/hero/hero-bcg-m@2x.webp);
     }
 }
@@ -32,7 +32,7 @@
     .hero-section {
         margin-top: 72px;
         background-image:
-            linear-gradient(rgba(46, 47, 66, 0.7) 0%, rgba(46, 47, 66, 0.7) 100%),
+            var(--linier-gradient),
             url(/src/img/hero/hero-bcg-t@1x.webp);
         background-repeat: no-repeat;
         background-position: top center;
@@ -42,7 +42,7 @@
     @media (min-resolution: 192dpi) {
         .hero-section {
             background-image:
-                linear-gradient(rgba(46, 47, 66, 0.7) 0%, rgba(46, 47, 66, 0.7) 100%),
+                var(--linier-gradient),
                 url(/src/img/hero/hero-bcg-t@2x.webp);
         }
     }
@@ -63,7 +63,7 @@
     .hero-section {
         margin-top: 72px;
         background-image:
-            linear-gradient(rgba(46, 47, 66, 0.7) 0%, rgba(46, 47, 66, 0.7) 100%),
+            var(--linier-gradient),
             url(/src/img/hero/hero-bcg-d@1x.webp);
         background-repeat: no-repeat;
         background-position: top center;
@@ -73,7 +73,7 @@
     @media (min-resolution: 192dpi) {
         .hero-section {
             background-image:
-                linear-gradient(rgba(46, 47, 66, 0.7) 0%, rgba(46, 47, 66, 0.7) 100%),
+                var(--linier-gradient),
                 url(/src/img/hero/hero-bcg-d@2x.webp);
         }
     }

@@ -18,23 +18,23 @@
 .logo-text {
     color: var(--color-primary);
     font-family: var(--secondary-font);
-    font-size: var(--fs-s);
+    font-size: var(--fs-logo);
     font-weight: var(--fw-bold);
-    line-height: var(--lh-m);
+    line-height: var(--lh-logo);
     text-transform: uppercase;
-    transition: color var(--anim-fast);
+    transition: color var(--transition);
 }
 
 .logo-accent {
     color: var(--color-dark);
-    transition: color var(--anim-fast);
+    transition: color var(--transition);
 }
 
 .logo-text:hover,
 .logo-text:focus,
 .logo-text:hover .logo-accent,
 .logo-text:focus .logo-accent {
-    color: var(--color-hover-text);
+    color: var(--color-pressed-text);
 }
 
 .nav-list {
@@ -55,34 +55,51 @@
     .nav-list {
         display: flex;
         gap: 40px;
+        font-weight: var(--fw-medium);
+    }
+
+    .nav-item::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: var(--color-pressed-text);
+        border-radius: 2px;
+        opacity: 0;
+        transition: opacity var(--transition);
+    }
+
+    .nav-item:hover::after,
+    .nav-item:focus::after {
+        opacity: 1;
     }
 
     .nav-link {
         padding: 24px 0;
-        transition: color var(--anim-fast);
+        transition: color var(--transition);
     }
 
     .nav-link:hover,
     .nav-link:focus,
     .nav-link.is-current {
-        color: var(--color-hover-text);
+        color: var(--color-pressed-text);
     }
 
     .header-address {
         display: flex;
         flex-direction: column;
         gap: 12px;
-        font-size: var(--fs-xs);
+        font-size: var(--fs-header-address);
         font-weight: var(--fw-regular);
-        line-height: var(--lh-m);
-        letter-spacing: var(--ls-l);
+        line-height: var(--lh-header-address);
+        letter-spacing: var(--ls-header-address);
         color: var(--color-subtle-text);
-        transition: color var(--anim-fast);
+        transition: color var(--transition);
     }
 
     .address-link:hover,
     .address-link:focus {
-        color: var(--color-hover-text);
+        color: var(--color-pressed-text);
     }
 }
 
@@ -92,8 +109,5 @@
         display: flex;
         flex-direction: row;
         gap: 40px;
-        font-size: var(--fs-m);
-        line-height: var(--lh-xxl);
-        letter-spacing: var(--ls-m);
     }
 }

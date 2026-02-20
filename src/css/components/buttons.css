@@ -1,39 +1,24 @@
-.burger-menu {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    line-height: 0;
-    cursor: pointer;
-}
-
-
-@media screen and (min-width: 767px) {
-    .burger-menu {
-        display: none;
-    }
-}
-
+/* ------------------ buttons ------------------ */
 .button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
-    border-radius: 4px;
-    padding: 16px 32px;
     min-width: 169px;
     max-height: 56px;
-    cursor: pointer;
+    padding: 16px 32px;
     color: var(--color-light);
     font-family: inherit;
+    border-radius: 4px;
     background-color: var(--color-primary);
-    transition: background-color var(--anim-fast);
+    transition: background-color var(--transition);
 }
 
 .button:hover,
 .button:focus {
-    background-color: var(--color-hover-text);
+    background-color: var(--color-pressed-text);
 }
 
+/* ------------------ hero-button ------------------ */
 .hero-button {
     margin-bottom: 72px;
 }
@@ -51,6 +36,24 @@
 }
 
 
+
+/* ------------------ burger-menu ------------------ */
+.burger-menu {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 767px) {
+    .burger-menu {
+        display: none;
+    }
+}
+
+
+/* ------------------ button-scroll ------------------ */
 .button-scroll {
     display: inline-flex;
     align-items: center;
@@ -60,20 +63,18 @@
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    border: 2px solid var(--color-primary);
+    border: 1px solid transparent;
     background-color: var(--color-primary);
     color: var(--color-light);
     opacity: 0.6;
-    transition: opacity var(--anim-fast),
-        background-color var(--anim-fast),
-        transform var(--anim-fast);
+    transition: opacity var(--transition),
+        background-color var(--transition),
 }
 
 .button-scroll:hover,
 .button-scroll:focus {
-    background-color: var(--color-hover-text);
+    background-color: var(--color-pressed-text);
     opacity: 1;
-    transform: scale(1.1);
 }
 
 .button-scroll-up {
@@ -87,23 +88,26 @@
 }
 
 
-
-
-/* .button-close {
+/* ------------------ button-close ------------------ */
+.button-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    width: 32px;
-    height: 32px;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
     background-color: transparent;
-    border: none;
-    stroke: var();
+    border: 1px solid var(--color-subtle-text);
+    border-radius: 100%;
+    transition: stroke var(--transition),
+        background-color var(--transition),
+        transform var(--transition);
 }
 
 .button-close:hover {
-    stroke: var();
+    border-color: transparent;
+    background-color: var(--color-pressed-text);
     transform: rotate(90deg);
 }
-
-.mobile-menu-button-close {
-    top: 16px;
-    right: 24px;
-} */
