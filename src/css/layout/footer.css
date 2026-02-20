@@ -1,57 +1,105 @@
 .footer {
-    padding: 40px 0;
-    background-color: var();
-    color: var();
+    background-color: var(--color-dark);
+    color: var(--color-light);
 }
 
 .footer-container {
-    display:
-        flex;
+    display: flex;
     flex-direction: column;
-    gap: 40px;
     text-align: center;
+    align-items: center;
+    gap: 72px;
 }
 
-.footer-link,
-.address-link {
-    font-family: var();
-    font-style: normal;
-    color: var();
-    transition: color var(--transition);
-}
-
-.footer-link:hover,
-.address-link:hover {
-    color: var();
-}
-
-.address-list {
+.logo-group {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 16px;
-    margin-bottom: 24px;
 }
 
-.socials-list {
+.footer-accent {
+    color: var(--color-light);
+}
+
+.footer-description {
+    max-width: 288px;
+    text-align: start;
+}
+
+
+.social-group {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
 
-.socials-icon {
-    fill: var();
-    transition: fill var(--transition);
+.social-title,
+.footer-form-title {
+    font-weight: var(--fw-medium);
 }
 
-.socials-link:hover .socials-icon {
-    fill: var();
+
+.footer-container .social-list {
+    gap: 16px;
 }
 
-.footer-legal {
-    font-size:
-        var();
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
 
-@media screen and (min-width: 767px) {}
+.footer-button-form {
+    position: relative;
+}
 
-@media screen and (min-width:1158px) {}
+
+@media screen and (min-width: 767px) {
+    .footer-container {
+        width: 528px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 72px 24px;
+        /* justify-content: center; */
+    }
+
+    .logo-group {
+        align-items: start;
+    }
+
+
+    .footer-description {
+        max-width: 264px;
+        align-items: start;
+    }
+
+
+    .social-group {
+        align-items: start;
+    }
+
+    .form-group {
+        align-items: start;
+    }
+}
+
+
+@media screen and (min-width:1158px) {
+    .footer-container {
+        width: 100%;
+        flex-wrap: nowrap;
+        gap: 0;
+    }
+
+    .logo-group {
+        margin-right: 120px;
+    }
+
+    .social-group {
+        margin-right: 80px;
+    }
+}

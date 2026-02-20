@@ -1,4 +1,4 @@
-/* ------------------ buttons ------------------ */
+/* ------------------buttons ------------------ */
 .button {
     display: inline-flex;
     align-items: center;
@@ -15,6 +15,23 @@
 
 .button:hover,
 .button:focus {
+    background-color: var(--color-pressed-text);
+}
+
+
+/* ------------------ footer-button ------------------ */
+.footer-button {
+    /* display: inline-flex;*/
+    justify-content: start;
+    align-items: center;
+    max-width: 165px;
+    max-height: 40px;
+    padding: 8px 24px;
+
+}
+
+.footer-button:hover,
+.footer-button:focus {
     background-color: var(--color-pressed-text);
 }
 
@@ -66,7 +83,7 @@
     border: 1px solid transparent;
     background-color: var(--color-primary);
     color: var(--color-light);
-    opacity: 0.6;
+    opacity: 0.3;
     transition: opacity var(--transition),
         background-color var(--transition),
 }

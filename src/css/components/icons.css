@@ -11,6 +11,13 @@
     fill: var(--color-pressed-text);
 }
 
+/* ------------------ footer-button-icon ------------------ */
+.button-icon {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+}
 
 /* ------------------ scroll-icon ------------------ */
 .button-scroll-icon {
