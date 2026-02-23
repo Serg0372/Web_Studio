@@ -17,7 +17,7 @@
 
     background-color: var(--color-primary);
 
-    transition: transform var(--transition);
+    transition: transform var(--transition-slow);
 }
 
 .overlay-text {
@@ -27,4 +27,5 @@
 .overlay-box:hover .overlay,
 .overlay-box:focus .overlay {
     transform: translateY(0%);
+
 }

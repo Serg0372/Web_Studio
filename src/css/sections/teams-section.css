@@ -20,9 +20,18 @@
 
 .team-card {
     width: 264px;
+
     text-align: center;
+
     background: var(--color-white-bg);
     box-shadow: var(--box-shadow);
+
+    transition: box-shadow var(--transition-slow);
+}
+
+.team-card:hover,
+.team-card:focus {
+    box-shadow: var(--box-shadow-pressed);
 }
 
 .team-content {

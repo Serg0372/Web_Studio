@@ -12,8 +12,14 @@
 }
 
 .portfolio-card {
-    border: 1px solid var(--color-border);
     box-shadow: var(--box-shadow);
+    transition: box-shadow var(--transition-slow);
+}
+
+.portfolio-card:hover,
+.portfolio-card:focus {
+    box-shadow: var(--box-shadow-pressed);
+
 }
 
 .portfolio-img {
