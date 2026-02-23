@@ -1,0 +1,30 @@
+.overlay-img-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+
+    width: 100%;
+    height: 100%;
+    padding: 40px 32px;
+
+    color: var(--color-light);
+
+    background-color: var(--color-primary);
+
+    transition: transform var(--transition);
+}
+
+.overlay-text {
+    text-align: left;
+}
+
+.overlay-box:hover .overlay,
+.overlay-box:focus .overlay {
+    transform: translateY(0%);
+}

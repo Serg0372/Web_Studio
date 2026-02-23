@@ -3,13 +3,17 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     min-width: 169px;
-    max-height: 56px;
+    height: 56px;
     padding: 16px 32px;
-    color: var(--color-light);
-    font-family: inherit;
     border-radius: 4px;
+
+    font-family: inherit;
+    color: var(--color-light);
+
     background-color: var(--color-primary);
+
     transition: background-color var(--transition);
 }
 
@@ -18,16 +22,17 @@
     background-color: var(--color-pressed-text);
 }
 
+.form-button {
+    width: 170px;
+    margin: 0 auto;
+}
 
 /* ------------------ footer-button ------------------ */
 .footer-button {
-    /* display: inline-flex;*/
-    justify-content: start;
-    align-items: center;
-    max-width: 165px;
-    max-height: 40px;
+    justify-content: space-between;
+    min-width: 165px;
+    height: 40px;
     padding: 8px 24px;
-
 }
 
 .footer-button:hover,
@@ -35,35 +40,20 @@
     background-color: var(--color-pressed-text);
 }
 
-/* ------------------ hero-button ------------------ */
-.hero-button {
-    margin-bottom: 72px;
-}
-
-@media screen and (min-width: 767px) {
-    .hero-button {
-        margin-bottom: 112px;
-    }
-}
-
-@media screen and (min-width: 1240px) {
-    .hero-button {
-        margin-bottom: 188px;
-    }
-}
-
-
 
 /* ------------------ burger-menu ------------------ */
 .burger-menu {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    line-height: 0;
     cursor: pointer;
+
+    padding: 0;
+    border: none;
+
+    line-height: 0;
+
+    background-color: transparent;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
     .burger-menu {
         display: none;
     }
@@ -72,59 +62,69 @@
 
 /* ------------------ button-scroll ------------------ */
 .button-scroll {
+    position: fixed;
+    z-index: 90;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    z-index: 90;
+
     width: 42px;
     height: 42px;
-    border-radius: 50%;
     border: 1px solid transparent;
-    background-color: var(--color-primary);
+    border-radius: 50%;
+
     color: var(--color-light);
+
     opacity: 0.3;
+    background-color: var(--color-primary);
+
     transition: opacity var(--transition),
-        background-color var(--transition),
+        background-color var(--transition)
 }
 
 .button-scroll:hover,
 .button-scroll:focus {
-    background-color: var(--color-pressed-text);
     opacity: 1;
+    background-color: var(--color-pressed-text);
 }
 
 .button-scroll-up {
-    bottom: 80px;
     right: 20px;
+    bottom: 80px;
 }
 
 .button-scroll-down {
-    bottom: 20px;
     right: 20px;
+    bottom: 20px;
 }
 
 
 /* ------------------ button-close ------------------ */
 .button-close {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
     top: 24px;
     right: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 24px;
     height: 24px;
-    background-color: transparent;
     border: 1px solid var(--color-subtle-text);
-    border-radius: 100%;
+    border-radius: 50%;
+
+    background-color: rgb(0, 0, 0, 10%);
+
     transition: stroke var(--transition),
         background-color var(--transition),
         transform var(--transition);
 }
 
 .button-close:hover {
-    border-color: transparent;
-    background-color: var(--color-pressed-text);
     transform: rotate(90deg);
+    border-color: transparent;
+    color: var(--color-accent);
+    background-color: var(--color-pressed-text);
 }

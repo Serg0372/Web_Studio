@@ -1,25 +1,26 @@
+/* Normalize */
+@import "modern-normalize";
+
 /* base styles */
-@import url('./base/variables.css');
-@import url('./base/reset.css');
-@import url('./base/fonts.css');
-@import url('./base/base.css');
+@import "./base/variables.css";
+@import "./base/fonts.css";
+@import "./base/reset.css";
+@import "./base/base.css";
 
 /* Components styles */
-@import url('./components/buttons.css');
-@import url('./components/icons.css');
-@import url('./components/mobile-menu.css');
-@import url('./components/modal.css');
-@import url('./components/form.css');
-/* @import url('./components/cards.css'); */
+@import "./components/buttons.css";
+@import "./components/icons.css";
+@import "./components/mobile-menu.css";
+@import "./components/modal.css";
+@import "./components/form.css";
+@import "./components/overlay.css";
 
 /*Layout styles */
-@import url('./layout/header.css');
-@import url('./layout/footer.css');
+@import "./layout/header.css";
+@import "./layout/footer.css";
 
 /*Sections styles */
-@import url('./sections/hero-section.css');
-@import url('./sections/features-section.css');
-@import url('./sections/teams-section.css');
-@import url('./sections/portfolio-section.css');
-/* @import url('./sections/.css');
-@import url('./sections/.css'); */
+@import "./sections/hero-section.css";
+@import "./sections/features-section.css";
+@import "./sections/teams-section.css";
+@import "./sections/portfolio-section.css";

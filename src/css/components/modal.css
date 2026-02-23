@@ -1,62 +1,50 @@
 .backdrop {
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 100;
+
+    background-color: var(--color-modal-overlay);
+
     transition: opacity var(--transition), visibility var(--transition);
 }
 
 .backdrop.is-hidden {
-    opacity: 0;
     pointer-events: none;
     visibility: hidden;
+    opacity: 0;
 }
 
 .modal {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 95%;
-    max-width: 450px;
-    background-color: var();
-    border-radius: 16px;
-    padding: 40px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+    max-width: 288px;
+    min-height: 625px;
+    padding: 72px 16px 24px;
+    border-radius: 4px;
+
+    background-color: var(--color-modal-bg);
+    box-shadow: var(--box-shadow)
 }
 
-.modal-close-btn {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    stroke: var();
-}
-
-.modal-title {
-    font-family: var();
-    font-size: var();
-    margin-bottom: 12px;
-    text-align: center;
-}
 
 .modal-text {
+    margin-bottom: 32px;
+    font-weight: var(--fw-medium);
     text-align: center;
-    margin-bottom: 24px;
-    font-size: var();
 }
 
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
     .modal {
-        max-width: 500px;
-        padding: 60px;
+        max-width: 408px;
+        min-height: 584px;
+
     }
 }
-
-@media screen and (min-width: 1240px) {}

@@ -1,0 +1,26 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-clean-order"],
+  "rules": {
+    "media-feature-range-notation": "prefix",
+    "color-function-notation": "legacy",
+    "selector-class-pattern": null,
+    "custom-property-pattern": null,
+    "comment-empty-line-before": null,
+    "comment-whitespace-inside": null,
+    "declaration-empty-line-before": null,
+    "no-descending-specificity": null,
+    "value-keyword-case": null,
+    "import-notation": "string",
+    "no-duplicate-selectors": null,
+    "declaration-block-no-duplicate-properties": null,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["import", "media"]
+      }
+    ],
+    "declaration-block-no-redundant-longhand-properties": null,
+    "at-rule-empty-line-before": null,
+    "rule-empty-line-before": null
+  }
+}
