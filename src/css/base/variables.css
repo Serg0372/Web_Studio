@@ -11,11 +11,9 @@
     --color-modal-overlay: rgb(46, 47, 66, 40%);
     --color-hero-bcg: rgb(46, 47, 66, 70%);
     --color-white-bg: #FFF;
-    /* --color-form-textarea: rgb(142, 143, 153, 50%); */
     --color-form-border-footer: rgb(255, 255, 255, 30%);
     --color-form-label-footer: rgb(255, 255, 255, 60%);
     --color-modal-bg: #FCFCFC;
-
 
     /* 2. Gradients & Shadows */
     --linear-gradient: linear-gradient(rgb(46, 47, 66, 70%), rgb(46, 47, 66, 70%));
@@ -23,7 +21,6 @@
     --box-shadow-pressed: 0 2px 1px 0 rgb(46, 47, 66, 8%),
         0 1px 1px 0 rgb(46, 47, 66, 16%),
         0 1px 6px 0 rgb(46, 47, 66, 8%);
-
 
     /* 3. Fonts Family */
     --primary-font: 'Roboto', sans-serif;
